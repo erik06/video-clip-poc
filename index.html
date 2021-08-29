@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Video Content Clip Proof of Concept</title>
+    <style>
+        svg#clip {
+            width: 0;
+            height: 0;
+            position: absolute;
+        }
+        
+        svg#outline {
+            position: absolute;
+            z-index: 10;
+            top: 5px;
+            left: 5px;
+            height: 99%;
+        }
+        
+        video {
+            display: block;
+            width: 100%;
+        }
+        
+        div:not(.clip-wrapper) {
+            -webkit-clip-path: url(#clip-00);
+            clip-path: url(#clip-00);
+        }
+        
+        .clip-wrapper {
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900">
+    <h1 class="text-white text-2xl text-center my-4">
+        Content Clip Video Background with Tailwind CSS Proof of Concept
+    </h1>
+    <div class="relative clip-wrapper">
+        <svg id="outline" width="1075" height="604" viewBox="0 0 1075 604" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M526.963 115.247C521.843 92.8118 513.99 73.035 503.398 55.9229C493.14 38.7988 479.969 25.4106 463.885 15.7693C447.784 5.58431 428.953 0.5 407.411 0.5H251.554H251.054V1V604V604.5H251.554H351.712H352.212V604V374.603L446.808 604.19L446.935 604.5H447.27H571.956H572.47H572.758H572.97H673.128H673.628V604V1V0.5H673.128H572.97H572.47V1V603.913L572.405 603.78L451.54 357.159C479.005 346.932 499.706 327.708 513.638 299.523C527.992 270.64 535.153 233.236 535.153 187.338C535.153 161.712 532.424 137.681 526.963 115.247ZM526.963 115.247C526.963 115.246 526.962 115.245 526.962 115.244L526.476 115.362L526.964 115.251C526.964 115.25 526.963 115.248 526.963 115.247ZM220.223 134.256H220.723V133.756V1V0.5H220.223H1H0.5V1V604V604.5H1H220.223H220.723V604V471.244V470.744H220.223H101.658V367.779H213.58H214.08V367.279V234.523V234.023H213.58H101.658V134.256H220.223ZM813.397 604V344.611L942.756 604.223L942.894 604.5H943.204H1073H1073.83L1073.44 603.767L906.466 286.507L1059.13 1.23592L1059.53 0.5H1058.69H935.028H934.716L934.579 0.779615L813.397 247.565V1V0.5H812.897H712.739H712.239V1V604V604.5H712.739H812.897H813.397V604ZM370.619 270.011H352.212V122.26H370.619C390.26 122.26 405.266 128.613 415.713 141.272C426.173 153.946 431.44 172.209 431.44 196.135C431.44 220.062 426.173 238.325 415.713 250.999C405.266 263.657 390.26 270.011 370.619 270.011Z"
+          stroke="#50F173"
+        />
+      </svg>
+
+        <svg id="clip" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <clipPath id="clip-00">
+          <path
+            d="M219.223 132.756H100.158V233.523H212.58V366.279H100.158V470.244H219.223V603H0V0H219.223V132.756Z"
+            fill="white"
+          />
+          <path
+            d="M350.712 269.511H369.619C389.378 269.511 404.538 263.113 415.099 250.317C425.659 237.521 430.94 219.127 430.94 195.135C430.94 171.143 425.659 152.749 415.099 139.954C404.538 127.158 389.378 120.76 369.619 120.76H350.712V269.511ZM570.956 603H446.27L350.712 371.077V603H250.554V0H406.411C427.874 0 446.611 5.06498 462.622 15.1949C478.634 24.7918 491.75 38.1207 501.97 55.1816C512.531 72.2427 520.366 91.9695 525.476 114.362C530.927 136.755 533.653 160.747 533.653 186.338C533.653 232.19 526.498 269.511 512.19 298.301C498.223 326.558 477.442 345.752 449.847 355.882L570.956 603Z"
+            fill="white"
+          />
+          <path d="M672.128 0V603H571.97V0H672.128Z" fill="white" />
+          <path
+            d="M811.897 248.717L934.028 0H1057.69L904.9 285.505L1072 603H942.204L811.897 341.487V603H711.739V0H811.897V248.717Z"
+            fill="white"
+          />
+        </clipPath>
+      </svg>
+
+        <div class="color-wrapper">
+            <div>
+                <video loop autoplay muted playsinline>
+            <source src="bg.mp4" type="video/mp4" />
+            <source
+              src="http://res.cloudinary.com/mgiulio/video/upload/c_scale,q_48,w_300/v1525608796/Ultra_Sunset_jeo0gp.webm"
+              type="video/webm"
+            />
+            <source
+              src="http://res.cloudinary.com/mgiulio/video/upload/c_scale,q_48,w_300/v1525608796/Ultra_Sunset_jeo0gp.mp4"
+              type="video/mp4"
+            />
+          </video>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
